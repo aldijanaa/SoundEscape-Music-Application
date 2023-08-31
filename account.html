@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <title>SoundEscape</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/account.css">
+
+
+     <!--Adding favicon-->
+    <link rel="favicon icon" type="image/x-icon" href="./images/logo of type.ico">   
+    
+    <!--Boxicons for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head> 
+<body>
+
+<!-- Back Button -->
+<div class="back-button">
+  <a href="library.html"><i class="bx bx-chevron-left"></i> </a>
+</div> 
+
+    <div class="container">
+        <div class="account-text">
+          <h1>Account</h1>
+        </div>
+        <div class="account-container">
+
+            <!--SIDEBAR-->
+        <div class="account-container">
+          <div class="account-sidebar">
+            
+                <div class="user-image">
+                  <img src="images/profile.jpg" alt="User Image">
+                  <h2> Jane Wilson</h2>
+                </div>
+                <br>
+                
+            <ul>
+              <li class="active" data-tab="overview">
+                <i class="fas fa-user icon"></i> Account Overview
+            </li>
+
+              <li data-tab="edit-profile">
+                <i class="fas fa-edit icon"></i> Edit Profile
+            </li>
+
+              <li data-tab="change-password">
+                <i class="fas fa-lock icon"></i> Change Password
+            </li>
+
+            <li data-tab="delete-account">
+                <i class="fas fa-trash icon"></i> Delete Account
+            </li>
+
+             
+            </ul>
+          </div>
+
+
+        <!--CONTENT-->
+          <div class="account-content">
+
+             <!-- Account Overview Content -->
+            <div id="overview" class="tab-content active">
+              <h2>Profile</h2>
+              <div class="profile-info">
+                <div class="profile-info-item">
+                  <span class="profile-info-title">Username</span>
+                  <span class="profile-info-value1">Jane Wilson</span>
+                </div>
+                <div class="profile-info-item">
+                  <span class="profile-info-title">Email</span>
+                  <span class="profile-info-value">jane@example.com</span>
+                </div>
+                <div class="profile-info-item">
+                  <span class="profile-info-title">Date of Birth</span>
+                  <span class="profile-info-value4">1985-02-12</span>
+                </div>
+                <div class="profile-info-item">
+                  <span class="profile-info-title">Country/Region</span>
+                  <span class="profile-info-value2">BiH</span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Edit Profile Content -->
+            <div id="edit-profile" class="tab-content">
+                <h2>Edit Profile</h2>
+                <form>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" value="jane@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="gender">Gender</label>
+                      <select id="gender" name="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="username">Username</label>
+                      <input type="text" id="username" name="username" value="JaneWilson">
+                    </div>
+                    <div class="form-group">
+                      <label for="country">Country</label>
+                      <input type="text" id="country" name="country" value="United States">
+                    </div>
+                    <div class="form-actions">
+                      <button type="button" class="btn btn-confirm">Confirm</button>
+                      <button type="button" class="btn btn-cancel">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+
+
+                
+             <!-- Change Password Content -->
+             <div id="change-password" class="tab-content">
+                <h2>Change Password</h2>
+                <form>
+                  <div class="form-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" name="current-password">
+                  </div>
+                  <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="new-password">
+                  </div>
+                  <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                  </div>
+                  <div class="form-actions">
+                    <button type="button" class="btn btn-confirm">Confirm</button>
+                    <button type="button" class="btn btn-cancel">Cancel</button>
+                  </div>
+                </form>
+              </div>
+              
+              
+            <!-- Delete Account Content -->
+            <div id="delete-account" class="tab-content">
+              <h2>Delete Account</h2>
+              <div class="delete-account-popup">
+                <p>Are you sure you want to delete SoundEscape account?
+                Deleting this account will remove all of your personalized data and you won't be able to restore it.</p>
+
+                <div class="form-actions">
+                  <button type="button" class="btn btn-delete">Delete Account</button>
+                  <button type="button" class="btn btn-cancel">Cancel</button>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="js/account.js"></script>
+
+</body>
+</html>

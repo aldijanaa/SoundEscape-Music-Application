@@ -1,0 +1,271 @@
+<!--HOME PAGE!!!!!!!!-->
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <title>SoundEscape</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/library.css">
+     <!--Adding favicon-->
+    <link rel="favicon icon" type="image/x-icon" href="./images/logo of type.ico">   
+    <!--Boxicons for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+ 
+<!--SIDEBAR-->
+<div class="sidebar">
+    <div class="logo_content">
+        <div class="logo">
+            <img src="images/logo of type.png " alt="light mode logo">  
+            <!--<div class="logo_name">SoundEscape</div> this is text-->
+        </div>
+        <i class='bx bx-menu' id="button"></i>
+    </div>
+
+
+    <!--HOME-->
+    <ul class="nav_list">
+        <li>
+            <a href="homepage.html">
+                <i class='bx bx-home-alt icon'></i>
+                <span class="links_name">Home</span>
+            </a>
+        </li>
+
+         <!--SEARCH-->
+         <li>
+            <a href="#">
+                <i class='bx bx-search icon'></i>
+                <span class="links_name">Search</span>
+            </a>
+        </li>
+ 
+        <!--LIBRARY-->
+        <li>
+            <a href="library.html">
+                 <i class='bx bx-library icon'></i>                   
+                 <span class="links_name">Library</span>
+            </a>
+        </li> 
+
+        <!--MY LIKED-->
+        <li>
+            <a href="likedsongs.html">
+              <i class="bx bx-heart icon"></i>
+              <span class="links_name">My Liked Songs</span>
+            </a>
+          </li>
+
+
+          <!--PROFILE SECTION-->
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                     <img src="images/profile.jpg" alt="profileImg" />
+                     <div class="name_text">
+                        <div class="name">Jane Wilson</div>
+                     </div>
+                </div>
+                  <!--log out icon-->
+            <i class="bx bx-log-out" id="log_out"></i>
+            </div>
+        </div>
+    </ul>
+</div>
+
+<!--------------------------------------------------------------->
+<div class="home_content">
+    <!--SEARCH BAR-->
+   
+    <!--SEARCH BAR-->
+    <div class="search-container">
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="Search Artist, Song, Album" name="q" autocomplete="off">
+            <button type="submit"><i class='bx bx-search'></i> </button>
+        </form>
+        </div>
+    
+         <!-- ICONS -->
+         <div class="icons-container">
+            <a href="account.html"><i class='bx bx-user-circle'></i></a>
+            <a href="settings.html"><i class='bx bx-cog'></i></a>
+        </div>
+        
+         
+
+
+    <!-- LIKED SONGS SECTION -->
+    <div class="liked-songs2" id="liked-songs-section">
+        <div class="liked-song-box">
+            <div class="heart-box">
+                <i class="bx bx-heart"></i>
+            </div>
+
+            <div class="liked-song-info">
+                <span class="liked-song-text">Liked Songs</span>
+                <span class="liked-song-count">500 songs</span>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="add-playlist">
+        <a href="" class="link_neki"></a>
+        <i class="bx bx-plus"></i>
+        <span>Add New Playlist</span>
+    </div> 
+
+    <!-- MY PLAYLISTS SECTION -->
+    <div class="my-playlists">
+        <h2 class="section-title">My Playlists</h2>
+        <div class="playlist-container"> 
+            
+
+            <div class="playlist-box " id = "broken-heart-playlist">
+                    <div class="player-box">
+                      <i class="bx bx-play"></i>
+                    </div>
+                <img src="images/playlist1.jpg" alt="Playlist 1">
+                <span class="playlist-name">Broken Heart</span>
+            </div>
+            <div class="playlist-box">
+                    <div class="player-box">
+                      <i class="bx bx-play"></i>
+                    </div>
+                <img src="images/playlist2.jpg" alt="Playlist 2">
+                <span class="playlist-name">A Perfect Day</span>
+            </div>
+            <div class="playlist-box">
+                <div class="player-box">
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist3.jpg" alt="Playlist 3">
+                <span class="playlist-name">sad vibes</span>
+            </div>
+            <div class="playlist-box">
+                <div class="player-box">
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist4.jpg" alt="Playlist 4">
+                <span class="playlist-name">Rêvasser</span>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- MY PLAYLISTS SECTION 2-->
+     <div class="my-playlists">
+        <div class="playlist-container">
+
+            <div class="playlist-box">
+                <div class="player-box">
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist5.jpg" alt="Playlist 1">
+                <span class="playlist-name">Just a regular meow</span>
+            </div>
+            <div class="playlist-box">
+                <div class="player-box">
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist6.jpg" alt="Playlist 2">
+                <span class="playlist-name">Éphémère</span>
+            </div>
+            <div class="playlist-box">
+                <div class="player-box">
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist7.jpg" alt="Playlist 3">
+                <span class="playlist-name"> Van Gogh Times</span>
+            </div>
+            <div class="playlist-box">
+                <div class="player-box">
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist8.jpg" alt="Playlist 4">
+                <span class="playlist-name">Émerveiller</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MY PLAYLISTS SECTION 3 -->
+    <div class="my-playlists">
+        <div class="playlist-container">
+
+            <div class="playlist-box">
+                <div class="player-box">
+                    <a href="" class="href"></a>
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist9.jpg" alt="Playlist 1">
+                <span class="playlist-name">Doesn't It?</span>
+            </div>
+            <div class="playlist-box">
+                <div class="player-box">
+                    <a href="" class="href"></a>
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist10.jpg" alt="Playlist 2">
+                <span class="playlist-name">Wave~</span>
+            </div>
+            <div class="playlist-box">
+                <div class="player-box">
+                    <a href="" class="href"></a>
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist11.jpg" alt="Playlist 3">
+                <span class="playlist-name">Ukiyo</span>
+            </div>
+            <div class="playlist-box">
+                <div class="player-box">
+                    <a href="" class="href"></a>
+                    <i class="bx bx-play"></i>
+                  </div>
+                <img src="images/playlist12.jpg" alt="Playlist 4">
+                <span class="playlist-name">Story To Tell</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--FOOTER ne treba ovdje-->
+    <!--<section class="footer">
+        <div class="share">
+            <a href="#" ><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#" ><i class='bx bxl-linkedin' ></i></a>
+        </div>
+        <div class="credit">Created by <span>Team B</span> | All rights reserved!</div>
+    </section>-->
+
+
+
+
+
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<!--JQUERY that I don't know lol, but was the only way to work-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/library.js"></script>
+
+
+</body>  
+</html>

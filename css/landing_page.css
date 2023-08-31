@@ -1,0 +1,258 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex: 1; /*allows the flex item to grow and shrink as needed to fill the available space within the flex container.*/
+}
+ 
+.banner{
+  width: 100%; 
+  max-width: 100%;
+  height: 100vh;
+  background: linear-gradient(#ffffff 30%, #914ed4 130%); 
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/*LOGO container*/
+.banner .image{
+  width: 100%;
+  margin: auto;  /*horizontally centers element, will adjust based on screen*/
+  display: flex;
+  justify-content:center; 
+  align-items: center; /*vertically center*/
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+ 
+/*Logo image*/
+.banner .image img{
+  align-items:center;
+  height: 80px; 
+  margin-top: 0;
+  max-width: 100%;
+  display: block;
+  opacity: 0;
+  filter: blur(4px);
+  animation: fade-in 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.banner_text{
+  margin-left: 30px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40vh;  /*position of buttons*/
+  opacity: 0;
+  animation: fade-in 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+
+ /*start turning your dreams into reality text*/
+ h3{
+  display: block;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  word-spacing: 7px;
+  margin-top: 200px; 
+  transform: scale(0.94); /*animation*/
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+ }
+
+
+span {
+  text-align: center;
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  margin-top: 10px;
+}
+
+
+/*soundescape text*/
+.name{
+  font-family: "Poppins" , sans-serif;
+  font-size: 30px;
+  font-weight: 0;
+  text-decoration-style: wavy;
+  letter-spacing: 0;
+  color:#2a2929;  /*boja loga*/
+}
+
+/*each word seperately with animation*/
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(11) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+/*BUTTONS FOR SIGN UP AND LOGIN*/
+ #btn-signup{
+  width: 500px; /*size of buttons*/
+  height: 40px; /*height of buttons*/
+  border-radius: 30px; /*corners of button*/
+  background-color: #ffffff;  /*color of button*/
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(161, 0, 230);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  transform: translateY(20px);
+  opacity: 0;
+  margin: 50px auto 0; 
+  display: block;
+
+ }
+
+ /*HOVER ON BUTTONS*/
+ #btn-signup:hover {
+  opacity: 1;
+  background-color: #84A5E3	;
+  color: rgb(255, 255, 255);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/*used in js*/
+#btn-signup.animate {
+  animation: slide-up 3s cubic-bezier(0.5, 1, 0.89, 1);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/*ANIMATIONS*/
+@keyframes slide-up {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+ /*ANIMATION OF REALITY TEXT H3*/
+ @keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+/***************MEDIA RESPONSIVNESS******************/
+
+/*MOBILE VIEW*/
+@media (max-width: 420px){
+  .banner{
+    height: 100vh;
+    width: 100%;
+  } 
+  #btn-signup{
+    width: 300px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 17px;
+  }
+  .banner_text{
+    margin-bottom: 10.em;
+    margin-top: 200px;
+  }
+  
+  h3{
+    font-size: 15px;
+    margin: auto;
+    margin-top: 200px
+   }
+
+   .banner h2{
+    font-size: 25px;
+   }
+}
+
+
+
+
+

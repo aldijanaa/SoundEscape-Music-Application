@@ -1,0 +1,402 @@
+
+body{
+    background: linear-gradient(to bottom, #ecd9ff 25%, #cc99ff 100%);
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    min-width: 100%; /*background preko citave stranice*/
+    min-height: 100vh;
+    overflow: hidden; /*nema scrolla*/
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto; 
+    padding: 20px;
+    
+}
+
+  /*Account text*/
+.account-text {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Poppins" , sans-serif;
+    letter-spacing: 10px;
+    font-weight: 600;
+}
+ 
+.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/*Container around sidebar*/
+.account-sidebar {
+    width: 200px; /*width*/
+    height: 500px; /*height of the sidebar*/
+    background-color: #9978df;
+    color: #fff;
+    padding: 20px;
+    /*border-radius: 10px;*/
+}
+  
+/*Account container and image*/
+.user-image {
+    margin-bottom: 20px;
+  }
+  
+.user-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: center;
+    margin-left: 50px;
+}
+
+/*Jane Wilson text*/
+h2{
+    font-family: "Poppins" , sans-serif;
+    font-size: 17px;
+    text-align: center;
+    color: #333;
+}
+/***************************************/
+.account-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*uređivanje links individually*/
+.account-sidebar li {
+    margin-top: 12px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    color: black;
+    text-decoration: none;
+    font-family: "Poppins" , sans-serif;
+    font-size: 15px;
+
+}
+
+/*Space between icon and texr*/
+.account-sidebar .icon {
+    margin-right: 15px;
+}
+  
+.account-sidebar li:not(:last-child) {
+    margin-bottom: 20px;
+}
+/*When you load the page, this is gon be loaded*/
+/*.account-sidebar li.active {
+    font-weight: bold;
+    /*color: pink;*/
+/*}*/
+ 
+/*****************************************************************/
+/*CONTENT OF SIDEBAR EACH*/
+.account-content {
+    background-color: #ffffff;  
+    height: 500px;
+    padding: 20px;
+    flex-grow: 1;
+    margin-left: 0;
+    width: 500px;
+    /*border-radius: 10px;*/
+}
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+
+  .tab-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .tab-content p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .fa-fw {
+    margin-right: 10px;
+  }
+  
+/***ACCOUNT OVERVIEW*****/
+
+  /*Profile*/
+.tab-content.active h2 {
+    display: block;
+    font-size: 30px;
+    text-align: left;
+    color: black;
+
+}
+/*Username, email, date of birth, country*/
+.profile-info {
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
+    font-size: 20px;
+    margin-left: 70px;
+}
+  
+.profile-info-label {
+    font-weight: bold;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+  
+
+.profile-info-item {
+    /*display: flex;*/
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 15px;  /*size of those*/
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+      
+  .profile-info-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+  }
+/*Username, email, date of birth, country each link seperately*/
+  .profile-info-title {
+    margin-right: 5px;
+    align-items: center;
+    text-align: center;
+    color: rgb(143, 140, 137);
+    font-family: "Poppins" , sans-serif;
+}
+  
+.profile-info-value {
+    color: #000000;
+    margin-left: 200px;
+    margin-right: 0;
+}
+  
+/*Morala independenzly*/
+.profile-info-value1{
+    margin-left: 220px;
+    margin-right: 0;
+    color: black;
+}
+/*Morala independenzly*/
+.profile-info-value2{
+    margin-left: 240px;
+    margin-right: 0;
+    color: black;
+}
+/*Morala independenzly*/
+.profile-info-value4{
+    margin-left: 213px;
+    margin-right: 0;
+    color: black;
+}
+
+/*****EDIT PROFILE******/
+.form-group {
+    margin-bottom: 15px;
+}
+  
+#edit-profile{
+    margin-top: 50px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 120px; /* Adjusted width to create consistent spacing */
+
+}
+input[type="text"],
+input[type="email"],
+select {
+  flex-grow: 1; 
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Added box-sizing property */
+
+}
+  
+.btn {
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+  
+.btn-confirm {
+    background-color: #9978df;
+    color: #fff;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+  
+.btn-cancel {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+  
+/********CHANGE PASSWORD*******/
+#change-password {
+    display: none;
+    margin-top: 50px;
+  }
+  
+  #change-password.active {
+    display: block;
+  }
+  
+  #change-password h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #change-password .form-group {
+    margin-bottom: 20px;
+  }
+  
+  #change-password label {
+    display: inline;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  #change-password input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  #change-password .form-actions {
+    margin-top: 20px;
+  }
+  
+  #change-password .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius:20px;
+    cursor: pointer;
+  }
+  
+  #change-password .btn-confirm {
+    background-color: #9978df;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  #change-password .btn-cancel {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /****Delete Account***/
+  #delete-account {
+    display: none;
+  }
+  
+  #delete-account.active {
+    display: block;
+  }
+  
+  #delete-account h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .delete-account-popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
+  }
+  .delete-account-popup:hover{
+    box-shadow: 0 0 15px rgba(72, 53, 219, 0.712);
+
+  }
+  
+  .delete-account-popup p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    
+  }
+ .sure{
+    text-align: center;
+  }
+  
+  .delete-account-popup .form-actions {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .delete-account-popup .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .delete-account-popup .btn-delete {
+    background-color: #9978df;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .delete-account-popup .btn-cancel {
+    background-color: #fff;
+    color: #333;
+  }
+  
+
+  .back-button {
+    align-items: flex-start;
+    display: flex;
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

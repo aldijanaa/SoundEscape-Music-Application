@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <title>SoundEscape</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/signup.css">
+
+     <!--Adding favicon-->
+    <link rel="favicon icon" type="image/x-icon" href="./images/logo of type.ico">   
+
+    <!--Boxicons for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+     <div class="container">
+ 
+        <!--for logo-->
+        <header class="header_logo">
+            <img src="images/logo of type.png">
+        </header>
+
+        <section class="section">
+            <div class="wrapper">
+                <div class="logreg-box">
+
+                    <!----------------------------SIGN UP OPTION----------------------------->
+                    <div class="form-box register">
+                        <div class="logreg-title">
+                            <h2>Sign Up</h2>
+                        </div>
+
+                        <!--Email:-->
+                        <form action = "#" id="signup-form">
+                            <div class="input-box">
+                                <span class="icon1">
+                                    <i class='bx bx-envelope'></i>
+                                </span>
+                                <input type = "text" required>
+                                <label>Enter email</label>
+                            </div>
+
+                            <!--Username-->
+                            <form action = "#">
+                                <div class="input-box">
+                                    <span class="icon1">
+                                        <i class='bx bx-user'></i>                                    
+                                    </span>
+                                    <input type = "text" required>
+                                    <label>Enter username</label>
+                                </div>
+
+                            <!--Password:-->
+                            <div class="input-box">
+                                <span class="icon1">
+                                    <i class='bx bx-lock-alt' ></i>
+                                </span>
+                                <input type = "password" required>
+                                <label>Enter Password</label>
+                            </div>
+
+                            
+
+                            <!--Terms and conditions-->
+                            <div class="remember-forgot">
+                                <label><input type="checkbox"> I agree to the terms and conditions</label>
+                                
+                            </div>
+                            
+
+                            <!--BUTTON TO SUBMIT-->
+                            <button type="submit" class="btn1">SIGN UP</button>
+                            
+                            <!--Have an account?-->
+                            <div class="logreg-link">
+                                <p>Already have an account? 
+                                    <a href="#" class="login-link">Log In</a>
+                                </p>
+                            </div>
+
+                            <!--SIGN UP w google -> Sign Up-->
+                            <div class="media-options2">
+                                <a href="#">
+                                    <i class='bx bxl-google'></i>
+                                    <span>Continue with Google</span>
+                                </a> 
+                            </div>
+
+                             
+                        </form>
+                    </div>
+
+
+
+                    <!------------LOGIN FORM-------->
+                    <div class="form-box login">
+                        <div class="logreg-title">
+                            <h2>Log In</h2>
+                        </div>
+
+                        <!--Email:-->
+                        <form action = "#" id="login-form">
+                            <div class="input-box">
+                                <span class="icon1">
+                                    <i class='bx bx-envelope'></i>
+                                </span>
+                                <input type = "email" required>
+                                <label>Email</label>
+                            </div>
+
+                            <!--Password:-->
+                            <div class="input-box">
+                                <span class="icon1">
+                                    <i class='bx bx-lock-alt' ></i>
+                                </span>
+                                <input type = "password"  id = "login-password" required>
+                                <label>Password</label>
+                            </div>
+
+                            <!--Forgot your password-->
+                            <div class="remember-forgot">
+                                <label><input type="checkbox"> Remember Me</label>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+
+                            <!--BUTTON TO SUBMIT-->
+                            <button type="submit" class="btn2" onclick = "redirectToSignUp()" >Log In</button>
+                            
+                            <!--Don't have an account?-->
+                            <div class="logreg-link">
+                                <p>Don't have an account? 
+                                    <a href="#" class="register-link">Register here!</a>
+                                </p>
+                            </div>
+                            
+                           <!--SIGN UP WITH GOOGLE -> Login option-->
+                            <div class="media-options2">
+                                <a href="#">
+                                    <i class='bx bxl-google'></i>
+                                    <span>Continue with Google</span>
+                                </a> 
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </section>
+    </div>
+          
+<!--novi js-->
+<script src="js/signup.js"></script>
+
+
+ 
+
+</body>
+</html>

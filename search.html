@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <title>SoundEscape</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/search.css">
+     <!--Adding favicon-->
+    <link rel="favicon icon" type="image/x-icon" href="./images/logo of type.ico">   
+    <!--Boxicons for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head> 
+<body> 
+ 
+<!--SIDEBAR-->
+<div class="sidebar"> 
+    <div class="logo_content">
+        <div class="logo">
+            <img src="images/logo of type.png " alt="light mode logo">  
+            <!--<div class="logo_name">SoundEscape</div> this is text-->
+        </div>
+        <i class='bx bx-menu' id="button"></i>
+    </div>
+
+
+    <!--HOME-->
+    <ul class="nav_list">
+        <li>
+            <a href="homepage.html">
+                <i class='bx bx-home-alt icon'></i>
+                <span class="links_name">Home</span>
+            </a>
+            <!--<span class="tooltip">Home</span>-->
+        </li>
+
+         <!--SEARCH--> 
+         <li>
+            <a href="#">
+                <i class='bx bx-search icon'></i>
+                <span class="links_name">Search</span>
+            </a>
+        </li>
+
+        <!--LIBRARY-->
+        <li>
+            <a href="library.html">
+                 <i class='bx bx-library icon'></i>                   
+                 <span class="links_name">Library</span>
+            </a>
+        </li> 
+
+        <!--MY LIKED-->
+        <li>
+            <a href="likedsongs.html">
+              <i class="bx bx-heart icon"></i>
+              <span class="links_name">My Liked Songs</span>
+            </a>
+          </li>
+
+
+          <!--PROFILE SECTION-->
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                     <img src="images/profile.jpg" alt="profileImg" />
+                     <div class="name_text">
+                        <div class="name">Jane Wilson</div>
+                     </div>
+                </div>
+                  <!--log out icon-->
+            <i class="bx bx-log-out" id="log_out"></i>
+            </div>
+        </div>
+    </ul>
+</div>
+
+
+<!-------------------------------------------------------->
+<div class="home_content">
+    <!-- ICONS -->
+    <div class="icons-container">
+        <a href="account.html"><i class='bx bx-user-circle'></i></a>
+        <a href="settings.html"><i class='bx bx-cog'></i></a>
+    </div>
+    
+    
+    <!--SEARCH BAR-->
+    <div class="search-container">
+    <form action="#" class="search-bar">
+        <input type="text" placeholder="Search Artist, Song, Album" name="q" autocomplete="off">
+        <button type="submit"><i class='bx bx-search'></i> </button>
+    </form>
+    </div>
+
+    <!--SEARCH PAGE-->
+    <div class="filter-container">
+        <!--<h2 class="section-title">Browse by categories</h2>-->
+        <div class="filter-buttons">
+          <button class="filter-button" id="artist-filter">Artist</button>
+          <button class="filter-button" id="album-filter">Album</button>
+          <button class="filter-button" id="genre-filter">Genre</button>
+        </div>
+    </div>
+
+    
+
+
+
+      <div class="content-container">
+            <div class="artist-content">
+                <h3 class="content-title">These are the artists that we recommend</h3>
+                
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="images/artist1.jpg" alt="Artist 1">
+                        <span class="name">Max Richter</span>
+                    </div>
+            <div class="grid-item">
+                <img src="images/artist2.jpg" alt="Artist 2">
+                <span class="name">Frederic Chopin</span>
+            </div>
+
+            <div class="grid-item">
+                <img src="images/artist3.jpg" alt="Artist 2">
+                <span class="name">Beethoven</span>
+            </div>
+
+            <div class="grid-item">
+                <img src="images/artist4.jpg" alt="Artist 2">
+                <span class="name">Wolfgang Amadeus Mozart</span>
+            </div>
+
+            
+            </div>
+        </div>
+
+
+        
+
+
+        <!-- Albums -->
+            <div class="album-content">
+                <h3 class="content-title">These are the albums that we recommend</h3>
+                <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/album1.png" alt="Album 1">
+                    <span class="name">Album 1</span>
+                </div>
+                <div class="grid-item">
+                    <img src="images/album2.png"  alt="Album 2">
+                    <span class="name">Album 2</span>
+                </div>
+                <div class="grid-item">
+                    <img src="images/album3.jpeg"  alt="Album 2">
+                    <span class="name">Album 2</span>
+                </div>
+                <div class="grid-item">
+                    <img src="images/album4.jpg"  alt="Album 2">
+                    <span class="name">Album 2</span>
+                </div>
+               
+                </div>
+            </div>
+  
+                <!-- Genres -->
+                <div class="genre-content">
+                    <h3 class="content-title">These are the genres that we recommend</h3>
+                    <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="images/genre1.jpg" alt="Genre 1">
+                        <span class="name">Deep love</span>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/genre2.jpg" alt="Genre 2">
+                        <span class="name">Melancholy</span>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/genre3.jpg" alt="Genre 2">
+                        <span class="name">Sad Acoustic</span>
+                    </div>
+                    <div class="grid-item">
+                        <img src="images/genre4.jpg" alt="Genre 2">
+                        <span class="name">Sad Songs</span>
+                    </div>
+
+                  
+                    </div>
+                </div>
+        </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--JQUERY that I don't know lol, but was the only way to work-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/search.js"></script>
+
+
+</body>
+</html>

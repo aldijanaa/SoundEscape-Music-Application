@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <title>SoundEscape</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/playlistview2.css">
+
+
+  
+     <!--Adding favicon-->
+    <link rel="favicon icon" type="image/x-icon" href="./images/logo of type.ico">   
+    <!--Boxicons for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+ 
+<!--SIDEBAR-->
+<div class="sidebar">
+    <div class="logo_content">
+        <div class="logo">
+            <img src="images/logo of type.png " alt="light mode logo">  
+            <!--<div class="logo_name">SoundEscape</div> this is text-->
+        </div>
+        <i class='bx bx-menu' id="button"></i>
+    </div>
+
+
+    <!--HOME-->
+    <ul class="nav_list">
+        <li>
+            <a href="homepage.html">
+                <i class='bx bx-home-alt icon'></i>
+                <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+        </li>
+
+         <!--SEARCH-->
+         <li>
+            <a href="#">
+                <i class='bx bx-search icon'></i>
+                <span class="links_name">Search</span>
+            </a>
+            <span class="tooltip">Search</span>
+        </li>
+
+        <!--LIBRARY-->
+        <li>
+            <a href="library.html">
+                 <i class='bx bx-library icon'></i>                   
+                 <span class="links_name">Library</span>
+            </a>
+            <span class="tooltip">Library</span>
+        </li> 
+
+        <!--MY LIKED-->
+        <li>
+            <a href="#">
+              <i class="bx bx-heart icon"></i>
+              <span class="links_name">My Liked Songs</span>
+            </a>
+            <span class="tooltip">Saved</span>
+          </li>
+
+
+          <!--PROFILE SECTION-->
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                     <img src="images/profile.jpg" alt="profileImg" />
+                     <div class="name_text">
+                        <div class="name">Jane Wilson</div>
+                     </div>
+                </div>
+                  <!--log out icon-->
+            <i class="bx bx-log-out" id="log_out"></i>
+            </div>
+        </div>
+    </ul>
+</div>
+
+
+<div class="home_content">
+
+
+<!-- Back Button -->
+<div class="back-button">
+    <a href="library.html"><i class="bx bx-chevron-left"></i> </a>
+</div> 
+       <!-- ICONS -->
+     <div class="icons-container">
+      <a href="account.html"><i class='bx bx-user-circle'></i></a>
+      <a href="settings.html"><i class='bx bx-cog'></i></a>
+  </div>
+  
+
+  <!-- Liked Songs Section -->
+      <div class="liked-songs">
+        <div class="image-box">
+          <img src="images/playlist1.jpg" alt="Playlist Image">
+        </div>
+          <div class="liked-song-box">
+          <div class="liked-song-info">
+            <div class="playlist-count">Playlist 500 songs</div>
+              <div class="liked-song-text">Broken Heart</div>
+                <div class="user-profile">
+                  <div class="user-icon">
+                   <i class="bx bx-user"></i>
+                  </div>
+                  <span class="user-name">Jane</span>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <!-- Player and Controls Section -->
+      <div class="controls-container">
+        <div class="play-button">
+          <i class="bx bx-play"></i>
+        </div>
+
+        <div class="search-icon2">
+          <i class="bx bx-search"></i>
+        </div>
+
+        <div class="download-icon">
+          <i class="bx bx-download"></i>
+        </div>
+      </div>
+
+      <br>
+      <br>
+   
+
+      <div class="songs-heading">
+        <div class="songs-text">#Songs</div>
+        <div class="album-text">ALBUM</div>
+        <div class="duration-icon">
+          <i class="bx bx-time"></i>
+        </div>
+        </div>
+        <div class="line"></div>
+
+
+          <div class="songs-list">
+            <div class="song-item">
+              <div class="song-number">1</div>
+              <div class="song-info">
+                <div class="song-image">
+                  <img src="images/song1.jpg" alt="Song 1">
+                </div>
+                <div class="song-details">
+                  <div class="song-name">Reminder</div>
+                  <div class="artist-name">The Weeknd</div>
+                  </div>
+  
+                  <div class="album-and-duration">
+                  <div class="album-name">Starboy</div>
+                  <div class="duration">3:23</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="songs-list">
+              <div class="song-item">
+                <div class="song-number">2</div>
+                <div class="song-info">
+                  <div class="song-image">
+                    <img src="images/song2.jpg" alt="Song 1">
+                  </div>
+                  <div class="song-details">
+                    <div class="song-name">Reminder</div>
+                    <div class="artist-name">The Weeknd</div>
+                    </div>
+    
+                    <div class="album-and-duration">
+                    <div class="album-name">Starboy</div>
+                    <div class="duration">3:23</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="songs-list">
+                <div class="song-item">
+                  <div class="song-number">3</div>
+                  <div class="song-info">
+                    <div class="song-image">
+                      <img src="images/song3.jpg" alt="Song 1">
+                    </div>
+                    <div class="song-details">
+                      <div class="song-name">Reminder</div>
+                      <div class="artist-name">The Weeknd</div>
+                      </div>
+      
+                      <div class="album-and-duration">
+                      <div class="album-name">Starboy</div>
+                      <div class="duration">3:23</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+                <div class="songs-list">
+                  <div class="song-item">
+                    <div class="song-number">4</div>
+                    <div class="song-info">
+                      <div class="song-image">
+                        <img src="images/song4.jpg" alt="Song 1">
+                      </div>
+                      <div class="song-details">
+                        <div class="song-name">Reminder</div>
+                        <div class="artist-name">The Weeknd</div>
+                        </div>
+        
+                        <div class="album-and-duration">
+                        <div class="album-name">Starboy</div>
+                        <div class="duration">3:23</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="songs-list">
+                    <div class="song-item">
+                      <div class="song-number">5</div>
+                      <div class="song-info">
+                        <div class="song-image">
+                          <img src="images/song5.jpg" alt="Song 1">
+                        </div>
+                        <div class="song-details">
+                          <div class="song-name">Reminder</div>
+                          <div class="artist-name">The Weeknd</div>
+                          </div>
+          
+                          <div class="album-and-duration">
+                          <div class="album-name">Starboy</div>
+                          <div class="duration">3:23</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="songs-list">
+                      <div class="song-item">
+                        <div class="song-number">6</div>
+                        <div class="song-info">
+                          <div class="song-image">
+                            <img src="images/song6.jpg" alt="Song 1">
+                          </div>
+                          <div class="song-details">
+                            <div class="song-name">Reminder</div>
+                            <div class="artist-name">The Weeknd</div>
+                            </div>
+            
+                            <div class="album-and-duration">
+                            <div class="album-name">Starboy</div>
+                            <div class="duration">3:23</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="songs-list">
+                        <div class="song-item">
+                          <div class="song-number">7</div>
+                          <div class="song-info">
+                            <div class="song-image">
+                              <img src="images/song7.jpg" alt="Song 1">
+                            </div>
+                            <div class="song-details">
+                              <div class="song-name">Reminder</div>
+                              <div class="artist-name">The Weeknd</div>
+                              </div>
+              
+                              <div class="album-and-duration">
+                              <div class="album-name">Starboy</div>
+                              <div class="duration">3:23</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="songs-list">
+                          <div class="song-item">
+                            <div class="song-number">8</div>
+                            <div class="song-info">
+                              <div class="song-image">
+                                <img src="images/song8.jpg" alt="Song 1">
+                              </div>
+                              <div class="song-details">
+                                <div class="song-name">Reminder</div>
+                                <div class="artist-name">The Weeknd</div>
+                                </div>
+                
+                                <div class="album-and-duration">
+                                <div class="album-name">Starboy</div>
+                                <div class="duration">3:23</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          
+                        <div class="songs-list">
+                          <div class="song-item">
+                            <div class="song-number">9</div>
+                            <div class="song-info">
+                              <div class="song-image">
+                                <img src="images/song9.jpg" alt="Song 1">
+                              </div>
+                              <div class="song-details">
+                                <div class="song-name">Reminder</div>
+                                <div class="artist-name">The Weeknd</div>
+                                </div>
+                
+                                <div class="album-and-duration">
+                                <div class="album-name">Starboy</div>
+                                <div class="duration">3:23</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          
+                
+                          
+                        <div class="songs-list">
+                          <div class="song-item">
+                            <div class="song-number">10</div>
+                            <div class="song-info">
+                              <div class="song-image">
+                                <img src="images/song10.jpg" alt="Song 1">
+                              </div>
+                              <div class="song-details">
+                                <div class="song-name">Reminder</div>
+                                <div class="artist-name">The Weeknd</div>
+                                </div>
+                
+                                <div class="album-and-duration">
+                                <div class="album-name">Starboy</div>
+                                <div class="duration">3:23</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          
+                
+                          
+                        <div class="songs-list">
+                          <div class="song-item">
+                            <div class="song-number">11</div>
+                            <div class="song-info">
+                              <div class="song-image">
+                                <img src="images/song11.jpg" alt="Song 1">
+                              </div>
+                              <div class="song-details">
+                                <div class="song-name">Reminder</div>
+                                <div class="artist-name">The Weeknd</div>
+                                </div>
+                
+                                <div class="album-and-duration">
+                                <div class="album-name">Starboy</div>
+                                <div class="duration">3:23</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          
+                          <div class="songs-list">
+                            <div class="song-item">
+                              <div class="song-number">12</div>
+                              <div class="song-info">
+                                <div class="song-image">
+                                  <img src="images/song12.jpg" alt="Song 1">
+                                </div>
+                                <div class="song-details">
+                                  <div class="song-name">Reminder</div>
+                                  <div class="artist-name">The Weeknd</div>
+                                  </div>
+
+                                  <div class="album-and-duration">
+                                  <div class="album-name">Starboy</div>
+                                  <div class="duration">3:23</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+          
+                          <div class="songs-list">
+                            <div class="song-item">
+                              <div class="song-number">13</div>
+                              <div class="song-info">
+                                <div class="song-image">
+                                  <img src="images/song13.jpg" alt="Song 1">
+                                </div>
+                                 <div class="song-details">
+                                  <div class="song-name">Reminder</div>
+                                  <div class="artist-name">The Weeknd</div>
+                                  </div>
+
+                                  <div class="album-and-duration">
+                                  <div class="album-name">Starboy</div>
+                                  <div class="duration">3:23</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            
+                          <div class="songs-list">
+                            <div class="song-item">
+                              <div class="song-number">14</div>
+                              <div class="song-info">
+                                <div class="song-image">
+                                  <img src="images/song14.jpg" alt="Song 1">
+                                </div>
+                                <div class="song-details">
+                                  <div class="song-name">Reminder</div>
+                                  <div class="artist-name">The Weeknd</div>
+                                  </div>
+
+                                  <div class="album-and-duration">
+                                  <div class="album-name">Starboy</div>
+                                  <div class="duration">3:23</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            
+                          <div class="songs-list">
+                            <div class="song-item">
+                              <div class="song-number">15</div>
+                              <div class="song-info">
+                                <div class="song-image">
+                                  <img src="images/song15.jpg" alt="Song 1">
+                                </div>
+                                <div class="song-details">
+                                  <div class="song-name">Reminder</div>
+                                  <div class="artist-name">The Weeknd</div>
+                                  </div>
+
+                                  <div class="album-and-duration">
+                                  <div class="album-name">Starboy</div>
+                                  <div class="duration">3:23</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+                          
+                
+
+
+                
+
+        </div>
+        
+          
+
+
+
+
+</div>
+<!--JQUERY that I don't know lol, but was the only way to work-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/library.js"></script>
+
+</body>
+</html>

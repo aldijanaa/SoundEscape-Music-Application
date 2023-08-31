@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <title>SoundEscape</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/settings.css">
+     
+    <!--Adding favicon-->
+    <link rel="favicon icon" type="image/x-icon" href="./images/logo of type.ico">   
+    
+    <!--Boxicons for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head> 
+<body>
+
+ <!-- Back Button -->
+<div class="back-button">
+    <a href="library.html"><i class="bx bx-chevron-left"></i> </a>
+  </div> 
+  
+      <div class="container">
+          <div class="account-text">
+            <h1>Settings</h1>
+          </div>
+          <div class="account-container">
+  
+              <!--SIDEBAR-->
+          <div class="account-container">
+            <div class="account-sidebar">
+              
+                  <div class="user-image">
+                    <img src="images/profile.jpg" alt="User Image">
+                    <h2> Jane Wilson</h2>
+                  </div>
+                  <br>
+                  
+              <ul>
+                <li class="active" data-tab="overview">
+                  <i class="fas fa-user icon"></i> Notifications
+              </li>
+  
+                <li data-tab="edit-profile">
+                  <i class="fas fa-edit icon"></i> Music quality
+              </li>
+  
+                <li data-tab="change-password">
+                  <i class="fas fa-lock icon"></i> Storage
+              </li>
+  
+              <li data-tab="delete-account">
+                  <i class="fas fa-trash icon"></i> Log out
+              </li>
+  
+               
+              </ul>
+            </div>
+   
+  
+          <!--CONTENT-->
+            <div class="account-content">
+  
+               <!-- Account Overview Content -->
+              <div id="overview" class="tab-content active">
+                <h2>Notifications</h2>
+                <div class="notification-item">
+                    <label for="push-notifications">Push Notifications</label>
+                    <input type="checkbox" id="push-notifications">
+                  </div>
+                  <div class="notification-item">
+                    <label for="email-notifications">Email Notifications</label>
+                    <input type="checkbox" id="email-notifications">
+                  </div>
+                  <div class="notification-item">
+                    <label for="playlist-updates">Playlist Updates</label>
+                    <input type="checkbox" id="playlist-updates">
+                  </div>
+                  <div class="notification-item">
+                    <label for="social-interactions">Social Interactions</label>
+                    <input type="checkbox" id="social-interactions">
+                  </div>
+                  <div class="notification-item">
+                    <label for="offline-downloads">Offline Downloads</label>
+                    <input type="checkbox" id="offline-downloads">
+                  </div>
+                  <div class="notification-item">
+                    <label for="account-security">Account Security</label>
+                    <input type="checkbox" id="account-security">
+                  </div>
+                  <div class="notification-item">
+                    <label for="app-updates">App Updates</label>
+                    <input type="checkbox" id="app-updates">
+                  </div>
+                  <div class="notification-item">
+                    <label for="event-reminders">Event Reminders</label>
+                    <input type="checkbox" id="event-reminders">
+                  </div>
+                  <div class="notification-item">
+                    <label for="personalized-recommendations">Personalized Recommendations</label>
+                    <input type="checkbox" id="personalized-recommendations">
+                  </div>
+                  <div class="notification-item">
+                    <label for="exclusive-content">Exclusive Content</label>
+                    <input type="checkbox" id="exclusive-content">
+                  </div>
+              </div>
+  
+              <!-- Edit Profile Content -->
+              <div id="edit-profile" class="tab-content">
+                  <h2>Music quality</h2>
+                  <p>Select your preferred music quality:</p>
+                   <div class="quality-option">
+                    <input type="radio" id="low-quality" name="music-quality" value="low">
+                    <label for="low-quality">Low Quality</label>
+                </div>
+                <div class="quality-option">
+                    <input type="radio" id="standard-quality" name="music-quality" value="standard" checked>#
+                    <label for="standard-quality">Standard Quality</label>
+                </div>
+                                <div class="quality-option">
+                                    <input type="radio" id="high-quality" name="music-quality" value="high">
+                                    <label for="high-quality">High Quality</label>
+                                </div>
+                                <button class="save-button">Save Changes</button>
+                  </div>
+  
+  
+                  
+               <!-- Change Password Content -->
+               <div id="change-password" class="tab-content">
+                  <h2>Storage</h2>
+                  <div class="storage-info">
+                    <p>Used Space: 2.5 GB</p>
+                    <p>Available Space: 7.5 GB</p>
+                  </div>
+                  
+                  <div class="storage-options">
+                    <h3>Manage Storage:</h3>
+                    
+                    <div class="storage-option">
+                      <input type="checkbox" id="auto-delete" name="auto-delete">
+                      <label for="auto-delete">Automatically delete downloaded songs when storage is low</label>
+                    </div>
+                    
+                    <div class="storage-option">
+                      <input type="checkbox" id="clear-cache" name="clear-cache">
+                      <label for="clear-cache">Clear cache</label>
+                    </div>
+                  </div>
+                  
+                  <button class="save-button">Save Changes</button>
+                </div>
+                
+                
+              <!-- Delete Account Content -->
+              <div id="delete-account" class="tab-content">
+                <h2>Log out</h2>
+                <div class="delete-account-popup">
+                  <p>Are you sure you want to log out from your SoundEscape account?</p>
+  
+                  <div class="form-actions">
+                    <button type="button" class="btn btn-delete">Log out</button>
+                    <button type="button" class="btn btn-cancel">Cancel</button>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+ <script src="js/settings.js"></script>
+
+</body>
+</html>

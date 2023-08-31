@@ -1,0 +1,502 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+  box-sizing: border-box;
+}
+
+/*around whole page*/
+.container{  
+    /*background: linear-gradient(to bottom, #ffffff 30%, #cc99ff 130%); */
+    background: linear-gradient(180deg, #ffffff 0%, #c888dd 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /*flex: 1; /*allows the flex item to grow and shrink as needed to fill the available space within the flex container.*/
+  }
+
+
+/*Logo container*/
+.header_logo{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content:center; 
+    align-items: center; /*vertically center*/
+    top: 0;
+    position: absolute;
+}
+
+/*Logo image*/
+.header_logo img{
+    align-items:center;
+    height: 80px;;  /*ovdje dodajem height loga*/
+    margin-top: 0;
+    max-width: 100%;
+    margin: auto;
+    opacity: 0;
+    filter: blur(4px);
+    animation: fade-in 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+
+.section{  /*used to set background*/
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 100%;
+    background-color: transparent;
+    flex-direction: column;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background-color: yellowgreen;*/
+}
+
+.wrapper .logreg-box{
+    /*background-color: #bab872;*/  /*BOJA TOG BOXA*/
+    /*background-color: transparent;*/
+    width: 100%;
+}
+
+
+
+/************************************************************************************************/
+
+/********LOGIN FORM DISPLAY**********/
+.wrapper .form-box.login{
+    display: block;         /*ovo je za login to not display it*/
+}
+/*when clicked on option  ------- js */
+.wrapper.active  .form-box.login{
+    display: none;
+
+}
+
+
+/********SIGN UP FORM DISPLAY**********/
+.wrapper .form-box.register{
+    display: none;
+}
+/*when clicked on option  ------- js */
+.wrapper.active .form-box.register{
+    display: block;
+
+}
+
+.form-box.register {
+    display: none;
+  }
+/*****************************************************************************************************/
+
+
+
+
+/*-----------------LOGIN FORM-----------------------*/
+/*Log in text*/
+.logreg-box .logreg-title{
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 10px;
+    color: #000000;  /*color of title Log in*/
+}
+
+.logreg-title h2{
+    font-size: 25px;
+}
+
+
+/********Input fields*************/
+.logreg-box .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /*background-color: red;*/
+    border-bottom: 2px solid #000000;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/*ovo je za ovo <input type = "email" password ...>*/
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;  /*mijenjam boju fielda*/
+    border: none;
+    outline: none;
+    font-size: 16px; /*size of text when entering email password and the rest*/   
+    font-weight: 500;
+    padding-right: 25px;
+}
+
+/*names of input fields: Email, Password...*/
+.input-box label{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: rgb(60, 56, 56); 
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+    /*cursor: pointer;*/
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+
+.input-box .icon1{
+    position: absolute;
+    color: black; /*color of icons*/
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 19px;
+}
+
+/*Forgot your password*/
+.logreg-box .remember-forgot{
+    font-size: 14px;
+    color: black; /*mijenjam boju tog texta*/
+    font-weight: 500;
+    margin: auto;
+    margin-top: -20px;  /*position for both password and rememeber me part to top*/
+    display: flex;
+    justify-content: space-between;
+    /*background-color: rebeccapurple;*/
+}
+
+.remember-forgot label input{
+    accent-color: #0485ff;
+    margin-right: 3px; 
+    margin-top: 0;
+    position: relative;
+
+}
+
+/*Remember me*/
+.remember-forgot a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/*change color of forgot password text*/
+.remember-forgot a:hover{
+    color: #0485ff;
+    /*color: rgb(117, 137, 218);*/
+    text-decoration: underline;
+}
+
+
+/*****************************************************************/
+
+/****************BUTTON FOR SIGN UP********************/
+.logreg-box .btn1{
+    width: 100%;
+    height: 45px; /*5vh   - viewheight*/ 
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0 .2);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 20px; /*position of button*/
+}
+
+/*Hovered button*/
+.logreg-box .btn1:hover{
+    background-color: #84A5E3;
+    color: white;
+    box-shadow: 0 0px 10px rgba(128, 0, 128, 0.4); 
+}
+
+/********************BUTTON FOR LOG IN******************/
+.logreg-box .btn2{
+    width: 100%;
+    height: 45px; /*5vh   - viewheight*/ 
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0 .2);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 20px; /*position of button*/
+}
+
+
+/*Hovered button*/
+.logreg-box .btn2:hover{
+    background-color: #84A5E3;
+    color: white;
+    box-shadow: 0 0px 10px rgba(128, 0, 128, 0.4); 
+}
+
+/************************************************************************/
+
+
+/*Don't have an account container?*/
+.logreg-box .logreg-link{
+    font-size: 14px;
+    color: #000000; /*in video its white collor of text*/
+    text-align: center;
+    font-weight: 500;
+    /*margin-top: 25px;*/
+    margin: 25px 0 15px;
+
+}
+
+
+/*Targetting Dont' have an account text and link "Register here"*/
+.logreg-link p a{
+    color:black; /*white in text*/
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logreg-link p a:hover{
+    text-decoration: underline;
+    color: blueviolet; /*color of the link once hovered*/
+}
+
+
+
+
+/*******Continue w google - LOG IN ********/
+.media-options{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.media-options a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    /*background-color: red;*/
+    border: 2px solid #000000; /*white border*/
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 40px;
+    color: #000000;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+.media-options a:hover{
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: 5px 5px 10px rgba(128, 0, 128, 0.4); 
+}
+
+/*icon google*/
+.media-options a i{
+    font-size: 22px;
+    margin: 0 8px 2px 0 ; /*whitespace between text and icon*/
+}
+
+/*text continue w google*/
+.media-options a span{
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+
+
+
+
+/*-----------------SIGN UP FORM-----------------------*/
+
+/*Sign up form*/
+.wrapper .form-box.register{
+    width: 100%;
+    height: 40%;
+    margin-top: 60px;
+}
+
+
+
+/*******Continue w google - SIGN UP********/
+.media-options2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.media-options2 a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    /*background-color: red;*/
+    border: 2px solid #000000; /*white border*/
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 40px;
+    color: #000000;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+.media-options2 a:hover{
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: 5px 5px 10px rgba(128, 0, 128, 0.4); 
+}
+
+/*icon google*/
+.media-options2 a i{
+    font-size: 22px;
+    margin: 0 8px 2px 0 ; /*whitespace between text and icon*/
+}
+
+/*text continue w google*/
+.media-options2 a span{
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+/***********************MEDIA RESPONSIVENESS*****************/
+
+/*MOBILE VERSION*/
+@media (max-width: 420px){
+    .container{
+        width: 100%;
+        height: 100vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper .form-box.login{
+        margin-top: 50px;
+        margin-left: 15px;
+        width: 90%;
+        height: 80%;
+        align-items: center;
+        justify-content: space-between;
+    } 
+
+    .wrapper .form-box.register{
+        margin-top: 50px;
+        margin-left: 15px;
+        width: 90%;
+        height: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .logreg-title h2{
+        font-size: 20px;
+    }
+
+    /*logo*/
+    .header_logo img{
+        align-items:center;
+        height: 60px;; 
+        margin-top: 0;
+        max-width: 100%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 375px){
+    .container{
+        width: 100%;
+        height: 100vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper .form-box.login{
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 80%;
+        height: 60%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .wrapper .form-box.register{
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 80%;
+        height: 60%;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

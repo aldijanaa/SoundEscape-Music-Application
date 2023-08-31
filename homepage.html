@@ -1,0 +1,317 @@
+<!--HOME PAGE!!!!!!!!-->
+<!DOCTYPE html>
+<html lang = "eng">
+<head>
+    <title>SoundEscape</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+     <!--Adding favicon-->
+    <link rel="favicon icon" type="image/x-icon" href="./images/logo of type.ico">   
+    <!--Boxicons for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head> 
+<body> 
+    <script>
+         // Check if this is the landing page
+  if (window.location.pathname === "/") {
+    // Redirect to landingpage.html only if the current page is the landing page
+    window.location.href = "homepage.html";  //this works
+  }
+    </script>
+ 
+<!--SIDEBAR-->
+<div class="sidebar"> 
+    <div class="logo_content">
+        <div class="logo">
+            <img src="images/logo of type.png " alt="light mode logo">  
+            <!--<div class="logo_name">SoundEscape</div> this is text-->
+        </div>
+        <i class='bx bx-menu' id="button"></i>
+    </div>
+
+
+    <!--HOME-->
+    <ul class="nav_list">
+        <li>
+            <a href="homepage.html">
+                <i class='bx bx-home-alt icon'></i>
+                <span class="links_name">Home</span>
+            </a>
+            <!--<span class="tooltip">Home</span>-->
+        </li>
+
+         <!--SEARCH--> 
+         <li>
+            <a href="search.html">
+                <i class='bx bx-search icon'></i>
+                <span class="links_name">Search</span>
+            </a>
+        </li>
+
+        <!--LIBRARY-->
+        <li>
+            <a href="library.html">
+                 <i class='bx bx-library icon'></i>                   
+                 <span class="links_name">Library</span>
+            </a>
+        </li> 
+
+        <!--MY LIKED-->
+        <li>
+            <a href="likedsongs.html">
+              <i class="bx bx-heart icon"></i>
+              <span class="links_name">My Liked Songs</span>
+            </a>
+          </li>
+
+
+          <!--PROFILE SECTION-->
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                     <img src="images/profile.jpg" alt="profileImg" />
+                     <div class="name_text">
+                        <div class="name">Jane Wilson</div>
+                     </div>
+                </div>
+                  <!--log out icon-->
+            <i class="bx bx-log-out" id="log_out"></i>
+            </div>
+        </div>
+    </ul>
+</div>
+ 
+
+
+<!--------------------------------------------------------------->
+    <!--SEARCH BAR-->      
+    <!--just redirecting on enter to another page, modify later-->
+    <!--<form action="https://www.google.com/search" method="get" class="search-bar">-->
+
+<div class="home_content">
+    
+    <!--SEARCH BAR-->
+    <div class="search-container">
+    <form action="#" class="search-bar">
+        <input type="text" placeholder="Search Artist, Song, Album" name="q" autocomplete="off">
+        <button type="submit"><i class='bx bx-search'></i> </button>
+    </form>
+    </div>
+
+     <!-- ICONS -->
+     <div class="icons-container">
+        <a href="account.html"><i class='bx bx-user-circle'></i></a>
+        <a href="settings.html"><i class='bx bx-cog'></i></a>
+    </div>
+    
+    
+    
+
+
+    <!--Top Genres-->
+    <div class="top-genres">
+        <h2 class="hello-text">Hello!</h2>
+        <h3>Top Genres</h3>
+        <div class="genres">
+            <div class="genre-box devotional">
+                <span>Devotional</span>
+            </div>
+            <div class="genre-box romance">
+                <span>Romance</span>
+            </div>
+            <div class="genre-box opera">
+                <span>Opera</span>
+            </div>
+            <div class="genre-box jazz">
+                <span>Jazz</span>
+            </div>
+            <div class="genre-box blues">
+                <span>Blues</span>
+            </div>
+            <div class="genre-box classical">
+                <span>Classical</span>
+            </div>
+            <div class="genre-box moody">
+                <span>Moody</span>
+            </div>
+    </div>
+
+    <!--Today's Top Hits-->
+    <div class="top-hits">
+        <h3>Today's Big Hits</h3>
+        <div class="hits-grid">
+
+        <div class="hit-box">
+            <img src="images/hit1.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Lacrimosa</span><br>
+                <span class="song-artist">Wolfgang Amadeus Mozart</span>
+            </div>
+            
+        </div>
+
+
+        <div class="hit-box">
+            <img src="images/hit2.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">The Prophet</span><br>
+                <span class="song-artist">Gary Moore</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/hit3.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Field</span><br>
+                <span class="song-artist">Evgeny Ginko</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/hit4.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Song Name 1</span><br>
+                <span class="song-artist">Artist Name 1</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/hit5.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Eo</span><br>
+                <span class="song-artist">Black Hill, hekkla</span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+     <!--SoundEscape recommended-->
+     <div class="top-hits">
+        <h3>SoundEscape Popular</h3>
+        <div class="hits-grid">
+
+        <div class="hit-box">
+            <img src="images/popular1.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Where Are You - Remastered</span><br>
+                <span class="song-artist">Frank Sinatra</span>
+            </div>
+        </div>
+
+
+        <div class="hit-box">
+            <img src="images/popular2.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">My Kind Of Woman</span><br>
+                <span class="song-artist">Mac DeMarco</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/popular3.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Toi et tes yeux d'enfant</span><br>
+                <span class="song-artist">Charles Aznavour</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/popular4.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">First Love</span><br>
+                <span class="song-artist">Jurivh</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/popular5.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Sarajevo</span><br>
+                <span class="song-artist">Max Richter</span>
+            </div>
+        </div>
+        </div>
+    </div>
+ 
+
+    <!--Album of the day-->
+    <div class="top-hits">
+        <h3>Album Of The Day</h3>
+        <div class="hits-grid">
+
+        <div class="hit-box">
+            <img src="images/album1.png" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Smitherness</span><br>
+                <span class="song-artist">Joji</span>
+            </div>
+        </div>
+
+
+        <div class="hit-box">
+            <img src="images/album2.png" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Codex III </span><br>
+                <span class="song-artist">Aaryah Shah</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/album3.jpeg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">Advice</span><br>
+                <span class="song-artist">Taemin</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/album4.jpg" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">You Never Walk Alone</span><br>
+                <span class="song-artist">BTS</span>
+            </div>
+        </div>
+
+        <div class="hit-box">
+            <img src="images/album5.png" alt="Hit 1">
+            <div class="song-info">
+                <span class="song-name">This is your sign</span><br>
+                <span class="song-artist">Citizen Soldier</span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+   
+
+
+    <section class="footer">
+        <div class="share">
+            <a href="#" ><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#" ><i class='bx bxl-linkedin' ></i></a>
+        </div>
+        <div class="credit">created by <span>Aldijana</span> | all rights reserved!</div>
+    </section>
+
+</div>
+
+
+
+
+
+<!--JQUERY that I don't know lol, but was the only way to work-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+
+</body>  
+</html>
+
+
+
+

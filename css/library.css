@@ -1,0 +1,961 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+/*********************SIDEBAR**********************************/
+.sidebar{
+    position: fixed; 
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;/*ovo je za kratki sidebar sa strane*/
+    /*background: #737188;*/
+    /*background:  #c0a7eb; /*#8159A8 ; */     /* #f9ceff;*/
+   /*trenutna finalna boja sidebara*/
+    background: linear-gradient(to bottom, #ffffff 15%, #cc99ff 100%);
+    
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2); /* adding box shadow to the sidebar */
+    
+}
+
+/*when sidebar is opened it's size is this*/
+.sidebar.active{
+    width: 250px;
+}
+
+/*container around logo*/
+.sidebar .logo_content .logo{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+
+    /*color: #fff;*/
+}
+/*hiding logo when in active*/
+.sidebar.active .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+
+/*za podesavanje dimensions of the logo*/
+.sidebar .logo_content .logo img{
+    margin-top: 35px;
+    margin-left: -12px; /*ja*/
+    height: 96px;      /*ja*/
+    width: auto; /*ja*/
+}
+/*ovo je btn u viideu*/
+.sidebar #button{
+    position: absolute;
+    color: #000000;  /*boja buttona*/
+    left: 50%;
+    top: 6px;
+    font-size: 40px;  /*dimenzije buttona se mijenja*/
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #button{
+    left: 90%;
+}
+
+.sidebar ul{
+    margin-top: 60px; /* u videu je 20px*/
+}
+
+
+/*ovo je za linkove*/
+.sidebar ul li{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0px 5px;
+    list-style: none;
+    line-height: 50px;  
+}
+
+/*OVDJE MIJENJAM POZICIJU TJ GDJE SE NALAZE LINKOVI*/
+.sidebar ul{
+    margin-top: 100px; /*at center*/    
+}
+
+
+/*HOME SEARCH LIBRARY LINKS*/
+.sidebar ul li a{
+    color: #6e6a6a;  /*color of links*/
+    display: flex;
+    align-items: center;
+   
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 18px; /*radius of links (podebljanje)*/
+    white-space: nowrap;
+    font-size: 16px;  /*NOVO PROMIJENJENO JE ALO*/
+}
+
+/*when you hover on the link, text and box color changes */
+.sidebar ul li a:hover{
+    color: #11101d;  /*boja teksta kad se hovera da se promijeni*/
+    background-color: #aa8ad8;  /*--primary-color: #AA8AD8;*/
+}
+
+
+/*for icons together*/
+.sidebar ul li  i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    font-size: 25px; /*velicina ikona*/
+    line-height: 50px; /*ovdje podesavam poziciju ikona*/
+    text-align: center;
+    /*margin-top: 50px; */ /*da pomjerim icons prema dole*/
+}
+
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*margin-top: 50px;*/ /*da pomjerim text prema dole*/
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.sidebar.active  ul li a .links_name{
+  margin-right: 13px;
+}
+
+/*PROFILE CONTENT */
+.sidebar .profile_content{
+    position: absolute;
+    color: #000000;    /*ovdje mijenjam boju */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    transition:all 0.4s ease;
+    background-color: none; /*ovo je boja ovog boxa oko imena*/  
+}
+/*ACTIVE JE  KADA JE PROŠIREN OVAJ SIDEBAR*/
+.sidebar.active .profile_content .profile{
+    background: NON; 
+}
+
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.sidebar.active .profile .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+
+} 
+
+.profile .profile_details img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 30px;  /*TO JE OVO NOVO*/
+    margin-right: 10px;
+
+}
+
+.profile .profile_details .name_text{
+    margin-left: 10px;
+}
+/*targeting only text div to change size, color*/
+.profile .profile_details .name{
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    white-space: nowrap;
+}
+
+/*ovo je za ovu ikonicu log out*/
+.profile #log_out{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 45px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center; /*za centiranje ikonice logout*/
+    transition: all 0.4s ease;
+    background:none;  /*mogu dodati bg za ikonicu logout*/
+}
+
+.sidebar.active .profile #log_out{
+    left: 88%;   
+}
+
+ /*ovo mi je box oko log out ikone*/
+.sidebar.active .profile #log_out{
+    background: none; 
+}
+
+/************************************************************************/
+/*****************HOME CONTENT --> REST OF THE PAGE******************/
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+    /*background: #f09292;*/
+    /*background: linear-gradient(to bottom, #ffffff 15%, #cc99ff 100%);*/
+    background: linear-gradient(to bottom, #ecd9ff 25%, #cc99ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+   /*justify-content: center; 
+    align-items: center;*/
+    padding-top: 70px; 
+    padding-bottom: 30px;
+    overflow-x: hidden;/*ovdje podesila da ima vertikalni ali ne horizontalni scroll*/
+    overflow-y: auto;
+}
+
+/*when sidebar active --> home_content*/
+.sidebar.active ~ .home_content{
+    width: calc(100% - 250px);  
+    left: 250px;
+    overflow-x: hidden;/*ovdje podesila da ima vertikalni ali ne horizontalni scroll*/
+    overflow-y: auto;
+    padding-bottom: 30px;
+
+}
+
+/*Scrollbar*/
+.home_content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.home_content::-webkit-scrollbar-thumb {
+  background-color: rgb(166, 135, 237); /*boja scrolla*/
+}
+
+.home_content::-webkit-scrollbar-track {
+  cursor: pointer;
+
+  background-color: white; /*staviti boju pozadine home_contenta*/
+}
+
+
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin-top: 12px;
+    margin-left: 13px; /*ovdje sam manuelno promijenila left marginu kod home content texta*/
+}
+
+/**********************SEARCH BAR******************************************/
+.sidebar:not(.active) ~ .home_content .search-bar {
+  width: 80%;
+  max-width: 600px;
+  height: 45px;
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 60px;
+  padding-right: 0px;
+  backdrop-filter: blur(4px) saturate(100%);
+  margin-left: 73px;
+  transition: none;
+}
+
+/*WHEN SIDEBAR NOT  EXPANDED -> SEARCH BAR*/
+.sidebar.active ~ .home_content .search-container .search-bar {
+  height: 45px;
+  margin-left: 0;
+  max-width: 600px;
+  height: 45px;
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 60px;
+  padding-right: 0px;
+  transition: none;
+}
+
+/*target text with button, container*/
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px;
+  padding-left: 50px;
+  font-size: 13px;
+  color: #000000; /*when writing color of text*/
+}
+/*button of search bar*/
+.search-bar button{
+  position: absolute;
+  border: none;
+  background: none;
+  margin-right: 0.5em;
+  cursor: pointer;
+  margin-left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+.sidebar.active .home_content  .search-container{
+  width: calc(100% - 250px); 
+  margin-right: 0;
+
+}
+.search-container {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  background: transparent;
+}
+/*icon of search bar*/
+.search-bar button i{
+  font-size: 24px;
+  width: 25px;
+  color: black;
+}
+
+/*novo za expanded sidebar*/
+.sidebar.active .home_content .search-bar {
+    margin-left: 40px;
+  }
+  
+  
+/*changing text inside the search bar*/
+::placeholder{
+  color: #898484;
+}
+
+  h2.section-title {
+    padding-left: 50px;
+    margin-left: 50px;
+    transition: padding-left 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+  }
+  
+  .sidebar.active .home_content h2.section-title {
+    padding-left: 30px;
+    margin-left: 30px;
+  }
+  /**********************SEARCH BAR**************************/
+
+/*target text with button, container*/
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px;
+  padding-left: 50px;
+  font-size: 13px;
+  color: #000000; /*when writing color of text*/
+
+}
+/*changing text inside the search bar*/
+::placeholder{
+  color: #898484;
+}
+/*image*/
+.search-bar button img{
+  width: 25px;
+}
+/*icon of search bar*/
+.search-bar button{
+  position: absolute;
+  border: none;
+  background: none;
+  margin-right: 0.5em;
+  cursor: pointer;
+  /*border-radius: 50%;*/
+  margin-left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+.sidebar.active .home_content  .search-container .search-bar{
+  margin-left: 40px;
+  align-items: center;
+}
+.search-container {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+/*account and settings icons*/
+.icons-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    margin-right: 30px;
+    gap: 30px;
+  }
+  .icons-container a {
+    width: 100%;
+    color: #000000; /*promijenjeno novo*/
+    font-size: 30px;
+    font-weight: 700;
+    transition: transform 0.3s ease-in-out; 
+  }
+  .icons-container a:hover{
+    transform: scale(1.50);
+  }
+
+/*************************************************************************************************/
+
+  /*LIKED SONGS*/
+
+
+  .liked-songs2 {
+    margin-top: 50px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 20px;
+    padding-left: 6%; /*????*/
+    cursor: pointer;
+    margin-bottom: 20px;
+ 
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+  }
+ 
+
+
+
+.liked-song-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.heart-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color:#AA8AD8;
+
+    width: 60px;  /*size and width of box*/
+    height: 60px;
+}
+.heart-box:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.heart-box i {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+.liked-song-info {
+    display: flex;
+    flex-direction: column;
+}
+.liked-song-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+.liked-song-count {
+    font-size: 17px;
+    color: #888;
+}
+
+
+/*Add playlist*/
+.add-playlist {
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 130px;
+    margin-top: -60px;
+    padding-top: 0;
+    font-size: 14px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; 
+}
+.add-playlist:hover{
+    transform: scale(1.05);
+    /*box-shadow: 5px 10px 8px #191919;*/
+}
+.add-playlist span:hover{
+    color: #a125bd;
+}
+
+.add-playlist span {
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+}
+  
+.add-playlist i {
+    color: #000000;
+    font-size: 27px;
+    font-weight: 700;
+    margin-right: -12px;
+}
+  
+
+
+
+/*PLAYLIST SECTION*/
+.my-playlists {
+    margin-top: 30px;
+    width: 100%;
+    /*height: 100%;*/
+  }
+
+h2{
+    color: #000000;
+    font-size: 30px;
+    font-weight: 700;
+    padding-left: 50px;
+    margin-left: 50px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+  
+.playlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;   
+    padding-bottom: 30px;
+    margin-left: -20px;
+    cursor: pointer;
+}
+  
+.playlist-box {
+    width: calc(25% - 20px); /* Display 4 playlists per row */
+    max-width: 240px;
+    background-color: #d6cbe4;
+    padding: 10px;
+ 
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.3s ease-in-out; 
+    position: relative; /*for player*/
+}
+.playlist-box:hover{
+    transform: scale(1.05); 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+.playlist-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+  
+.playlist-name {
+    font-size: 14px;
+    color: #000000;
+    /*color: #777;*/
+    border-radius: 5px;
+    padding: 5px;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+}
+
+.sidebar.active .my-playlists .playlist-container .playlist-box {
+    width: 50px !important;
+}
+
+/*Player icon*/
+.player-box {
+    position: absolute;
+    top: 84%; /*not good approach*/
+    left: 80%;
+    display: flex; /* Update to flex */
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    width: 30px;
+    height: 30px;
+    background-color: #AA8AD8; /* Purple color */
+    border-radius: 50%;
+    
+}
+  
+.player-box i {
+    color: #000000; /* Black color for player icon */
+    font-size: 30px;
+    align-items:end;
+}
+  
+
+
+
+@media screen and (max-width: 480px) {
+    .playlist-box {
+      width: 100%; /* Display 1 playlist per row on smaller screens */
+    }
+  
+  
+  .sidebar.active .my-playlists {
+    margin-left: 250px; 
+  }
+  .sidebar.active .section-title {
+    margin-left: 250px; 
+  }
+}
+
+
+
+  
+  @media screen and (max-width: 768px) {
+    .playlist-box {
+      width: calc(50% - 20px); /* Display 2 playlists per row on smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .playlist-box {
+      width: 100%; /* Display 1 playlist per row on smaller screens */
+    }
+  }
+  
+  
+  
+  
+  
+
+/* FOOTER */
+/*.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+    z-index: 999;
+    top: 80px;
+  }
+  
+  .footer .share {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    height: 100px;
+    width: 100%;
+   
+  }
+  
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+    border: .1rem solid var(--primary-color);
+    margin: .3rem;
+    border-radius: 30%;
+    transition: background-color 0.3s ease;
+}
+  
+.footer .share a:hover {
+    transform: scale(0.8); 
+    color: #fff;
+    background-color: #AA8AD8;
+}
+  
+.footer .credit {
+    font-size: 2rem;
+    color: var(--black);
+    padding: 1rem;
+    font-weight: lighter;
+}
+  
+.footer .credit span {
+    font-weight: 500;
+    color: #AA8AD8;;
+}*/
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /**********************MEDIA RESPONSIVENESS*****************************/
+/*podesavanje velicine za određeni screen*/
+@media (max-width: 420px) {
+    .sidebar li .tooltip{
+      display: none;
+    }
+  }
+  .banner {
+    background-color: purple;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  .buttons {
+    margin-top: 20px;
+  }
+  .signup,
+  .login {
+    background-color: white;
+    color: purple;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .signup:hover,
+  .login:hover {
+    background-color: #805e5e;
+  }
+  /* Media queries for responsiveness */
+  /* For screens smaller than 768px */
+  @media (max-width: 767px) {
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar.active {
+    width: 200px;
+  }
+  .sidebar .logo_content .logo img {
+    margin-top: 25px;
+    height: 60px;
+  }
+  .sidebar #button {
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+  }
+  .sidebar ul {
+    margin-top: 80px;
+  }
+  .sidebar ul li a {
+    font-size: 16px;
+    display: flex;
+  }
+  .sidebar ul li a i{
+    display: flex;
+    margin-top: 0px;
+  }
+  .sidebar ul li i {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  /*for text home,search,library*/
+  .sidebar .links_name {
+    font-size: 14px;
+    margin-top: -12px;
+    margin-right: 8px;
+  }
+  .sidebar .profile .profile_details img {
+    height: 35px;
+    width: 35px;
+  }
+  .profile .profile_details .name {
+    font-size: 12px;
+  }
+  .sidebar .profile #log_out {
+    font-size: 16px;
+    line-height: 35px;
+  }
+  .home_content {
+    left: 60px;
+  }
+  .sidebar.active ~ .home_content {
+    width: calc(100% - 200px);
+    left: 200px;
+  }
+  }
+  
+  /* For screens smaller than 420px */
+  @media (max-width: 419px) {
+  .sidebar {
+    width: 50px;
+  }
+  .sidebar.active {
+    width: 180px;
+  }
+  .sidebar .logo_content .logo img {
+    margin-top: 15px;
+    height: 45px;
+  }
+  .sidebar #button {
+    font-size: 25px;
+    height: 35px;
+    width: 35px;
+  }
+  .sidebar ul {
+    margin-top: 70px;
+  }
+  .sidebar ul li a {
+    font-size: 14px;
+    display: flex; /*????*/
+    align-items: center;
+  }
+  .sidebar ul li a:hover{
+    color: #11101d;  
+    background-color: #aa8ad8;  
+    height: 80%;
+    
+  }
+  /*ovo je both za ikonice and imena*/
+  .sidebar ul li a i{
+    display: flex;
+    margin-right: -10px;
+  }
+  .sidebar ul li a .icon {
+    /*margin-right: 8px;*/
+    top: 15px;
+  }
+  .sidebar ul li .tooltip{
+    width: 122px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .sidebar.active ul li .tooltip{
+    display: none;
+    font-size: 16px;
+  }
+  .sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+    font-size: 16px;
+  }
+  .sidebar  ul li a .links_name{
+  margin-right: 20px;
+  }
+  .sidebar ul li i {
+    font-size: 18px;
+    line-height: 35px;
+  }
+  .sidebar .links_name {
+    font-size: 12px;
+  }
+  .sidebar .profile .profile_details img {
+    height: 30px;
+    width: 30px;
+  }
+  .profile .profile_details .name {
+    font-size: 10px;
+  }
+  .sidebar .profile #log_out {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .home_content {
+    left: 50px;
+  }
+  .sidebar.active ~ .home_content {
+    width: calc(100% - 180px);
+    left: 180px;
+  }
+  .profile .profile_details img{
+    margin-top:10px;
+  }
+  .profile .profile_details .name_text{
+    margin-top: 10px;
+  }
+  }
+  
+  

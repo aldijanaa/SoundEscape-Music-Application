@@ -1,0 +1,570 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden; 
+}
+/*********************SIDEBAR**********************************/
+.sidebar{
+    position: fixed; 
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;/*ovo je za kratki sidebar sa strane*/
+    /*background: #737188;*/
+    /*background:  #c0a7eb; /*#8159A8 ; */     /* #f9ceff;*/
+   /*trenutna finalna boja sidebara*/
+    background: linear-gradient(to bottom, #ffffff 15%, #cc99ff 100%);
+    /*background-color: rgb(214, 215, 248);*/
+    /*background-color: rgb(234, 224, 238);*/
+
+    /*background-color: #282246;*/
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2); /* adding box shadow to the sidebar */
+}
+
+/*when sidebar is opened it's size is this*/
+.sidebar.active{
+    width: 250px;
+}
+
+/*container around logo*/
+.sidebar .logo_content .logo{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    /*color: #fff;*/
+}
+/*hiding logo when in active*/
+.sidebar.active .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
+}
+
+/*za podesavanje dimensions of the logo*/
+.sidebar .logo_content .logo img{
+    margin-top: 35px;
+    margin-left: -12px; /*ja*/
+    height: 96px;      /*ja*/
+    width: auto; /*ja*/
+}
+/*ovo je btn u viideu*/
+.sidebar #button{
+    position: absolute;
+    color: #000000;  /*boja buttona*/
+    left: 50%;
+    top: 6px;
+    font-size: 40px;  /*dimenzije buttona se mijenja*/
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #button{
+    left: 90%;
+}
+
+.sidebar ul{
+    margin-top: 60px; /* u videu je 20px*/
+}
+
+
+/*ovo je za linkove*/
+.sidebar ul li{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0px 5px;
+    list-style: none;
+    line-height: 50px;  
+}
+
+/*OVDJE MIJENJAM POZICIJU TJ GDJE SE NALAZE LINKOVI*/
+.sidebar ul{
+    margin-top: 100px; /*at center*/    
+}
+
+/*HOME SEARCH LIBRARY LINKS*/
+.sidebar ul li a{
+    color: #6e6a6a;  /*color of links*/
+    display: flex;
+    align-items: center;   
+    text-decoration: none;
+    transition: all 0.1s ease;
+    border-radius: 18px; /*radius of links (podebljanje)*/
+    white-space: nowrap;
+    font-size: 16px;  /*size of links*/ 
+}
+
+/*when you hover on the link, text and box color changes */
+.sidebar ul li a:hover{
+    color: #000000;  /*boja teksta kad se hovera da se promijeni*/
+    background-color: #a77ee0;  /*--primary-color: #AA8AD8;*/
+}
+
+/*for icons together*/
+.sidebar ul li  i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    font-size: 25px; /*velicina ikona*/
+    line-height: 50px; /*ovdje podesavam poziciju ikona*/
+    text-align: center;
+    /*margin-top: 50px; */ /*da pomjerim icons prema dole*/
+}
+
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*margin-top: 50px;*/ /*da pomjerim text prema dole*/
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.sidebar.active  ul li a .links_name{
+  margin-right: 13px;
+}
+
+/*PROFILE CONTENT */
+.sidebar .profile_content{
+  cursor: pointer;
+    position: absolute;
+    color: #4a4646;  /*color of log out icon*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    transition:all 0.4s ease;
+    background-color: none; /*ovo je boja ovog boxa oko imena*/  
+}
+/*ACTIVE JE  KADA JE PROŠIREN OVAJ SIDEBAR*/
+.sidebar.active .profile_content .profile{
+    background: none; 
+}
+
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.sidebar.active .profile .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.profile .profile_details img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.profile .profile_details .name_text{
+    margin-left: 10px;
+}
+
+/*targeting only text div to change size, color*/
+.profile .profile_details .name{
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    white-space: nowrap;
+}
+
+/*ovo je za ovu ikonicu log out*/
+.profile #log_out{
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 45px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-align: center; /*za centiranje ikonice logout*/
+    transition: all 0.4s ease;
+    background:none;  /*mogu dodati bg za ikonicu logout*/
+}
+
+.sidebar.active .profile #log_out{
+    left: 88%;   
+}
+
+ /*ovo mi je box oko log out ikone*/
+.sidebar.active .profile #log_out{
+    background: none; 
+}
+
+/************************************************************************/
+/*****************HOME CONTENT --> REST OF THE PAGE******************/
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+    /*background: linear-gradient( #A484FF, #412889, #FFFFFF);*/
+    /*background: linear-gra
+    dient(to top, #6699ff 0%, #ff99cc 100%);*/
+    background: linear-gradient(to bottom, #ecd9ff 25%, #cc99ff 100%);
+    /*background: linear-gradient(0deg, rgba(211,191,241,1) 0%, rgba(162,210,255,1) 85%);*/
+
+
+    /*background: linear-gradient(0deg, #57b6e5 0%, #BFACE2 100%);*/
+    /*background: linear-gradient(0deg, #825dc7 0%, #c4abf2 100%);*/
+
+   /* background:linear-gradient(184deg, rgba(196,171,242,1) 0%, rgba(71,191,200,1) 93%);*/
+    /*background: #87CEEB;*/
+    /*ovaj mi je trenutni glavni jer da je sve u centru*/
+    display: flex;
+    justify-content: flex-start; 
+    align-items:center;
+
+    /*justify-content: space-between;
+    align-items: center; */
+  
+    padding-top: 70px; 
+    padding-bottom: 30px;
+
+    overflow-x: hidden;/*ovdje podesila da ima vertikalni ali ne horizontalni scroll*/
+    overflow-y: auto;
+}
+
+/*when sidebar active --> home_content*/
+.sidebar.active ~ .home_content{
+    width: calc(100% - 250px);  
+    left: 250px;
+    overflow-x: hidden;/*ovdje podesila da ima vertikalni ali ne horizontalni scroll*/
+    overflow-y: auto;
+    padding-bottom: 30px;
+
+}
+
+/*Scrollbar*/
+.home_content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.home_content::-webkit-scrollbar-thumb {
+  background-color: rgb(166, 135, 237); /*boja scrolla*/
+}
+
+.home_content::-webkit-scrollbar-track {
+  cursor: pointer;
+
+  background-color: white; /*staviti boju pozadine home_contenta*/
+}
+
+
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1d1b31;
+    margin-top: 12px;
+    margin-left: 13px; /*ovdje sam manuelno promijenila left marginu kod home content texta*/
+}
+ 
+
+/**********************SEARCH BAR******************************************/
+.sidebar:not(.active) ~ .home_content .search-bar {
+  width: 80%;
+  max-width: 600px;
+  height: 45px;
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 60px;
+  padding-right: 0px;
+  backdrop-filter: blur(4px) saturate(100%);
+  margin-left: 73px;
+  transition: none;
+}
+/*WHEN SIDEBAR NOT  EXPANDED -> SEARCH BAR*/
+.sidebar.active ~ .home_content .search-container .search-bar {
+  height: 45px;
+  margin-left: 0;
+  max-width: 600px;
+  height: 45px;
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 60px;
+  padding-right: 0px;
+  transition: none;
+}
+/*target text with button, container*/
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px;
+  padding-left: 50px;
+  font-size: 13px;
+  color: #000000; /*when writing color of text*/
+}
+
+/*changing text inside the search bar*/
+::placeholder{
+  color: #898484;
+}
+
+/*button of search bar*/
+.search-bar button{
+  position: absolute;
+  border: none;
+  background: none;
+  margin-right: 0.5em;
+  cursor: pointer;
+  margin-left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+
+/*icon of search bar*/
+.search-bar button i{
+  font-size: 24px;
+  width: 25px;
+  color: black;
+}
+
+/*.sidebar.active .home_content  .search-container .search-bar{
+  margin-left: 40px;
+  align-items: center;
+}*/
+.sidebar.active .home_content  .search-container{
+  width: calc(100% - 250px); 
+  margin-right: 0;
+
+}
+.search-container {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  background: transparent;
+}
+
+
+/*account and settings icons*/
+.icons-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-right: 30px;
+  gap: 30px;
+ 
+} 
+
+.icons-container a {
+  width: 100%;
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.icons-container a:hover{
+  transform: scale(1.50);
+}
+
+/**************************SEARCH PAGE******************************************/
+.search-page {
+    padding: 20px;
+  }
+
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: -200px;
+  }
+
+  /*container around buttons*/
+  .filter-buttons {
+    display: flex;
+    justify-content: space-between; /* Adjust alignment as per your needs */
+    margin-top: -280px; /* Adjust spacing as needed */
+    margin-bottom: 10px;
+    gap: 100px;
+   
+  }
+  
+  /*Mijenja se buttons*/
+  .filter-button {
+    /*padding: 10px 20px;*/
+    border-radius: 20px;
+    background-color: #9998f4;
+    font-weight: bold;
+    cursor: pointer;
+    width: 190px; /* Adjust the width as needed */
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+  }
+  
+  .filter-button.active {
+    background-color: #8137e1;
+    color: #fff;
+    border: none;
+  }
+
+
+/************************************************/
+/*Artists we recomended*/
+.content-title {
+    font-size: 23px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: left;
+    margin-left: -900px;
+    color: #8137e1;
+    
+  }
+  
+  .artist-content,
+  .album-content,
+  .genre-content {
+    display: none;
+  }
+
+.content-container {
+    margin-left: -20px; /* Adjust the negative margin to move the grid towards the left */
+  }
+  
+  .album-content,
+  .genre-content {
+    padding: 20px; /* Add padding to increase the size of the box */
+  }
+
+  /*ARTIST, ALBUM, GENRE*/
+ .album-content,
+.genre-content {
+  display: none;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -900px;
+    gap: 70px;
+}
+
+.grid-item {
+    padding: 10px;
+    gap: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    height: 250px; /* Adjust the height as needed */
+}
+.grid-item:hover {
+    transform: scale(1.05); /* increase size slightly on hover */
+  }
+
+.grid-item img {
+    border-radius: 15px;
+  display: flex;
+  object-fit: cover;
+  margin-bottom: 5px; /* Reduce the margin as needed */
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.grid-item .name {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+/*drugi
+
+
+
+
+
+
+
+  
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-item {
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-item {
+    flex-basis: 100%;
+  }
+}
+
+  
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .grid-item {
+      flex-basis: calc(25% - 40px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid-item {
+      flex-basis: calc(33.33% - 40px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .grid-item {
+      flex-basis: calc(50% - 40px);
+    }
+  }
